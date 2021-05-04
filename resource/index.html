@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今日资讯</title>
+    <script src="https://cdn.bootcss.com/marked/0.7.0/marked.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="content"></div>
+</body>
+<script>
+    (function() {
+        $.ajax({
+            url: 'http://127.0.0.1:8888/index.json',
+            dataType: 'json',
+            success(data){
+                const content = data.data.reduce((a, b) => a + b.text, '');
+                // 资讯我使用的是markdown进行保存,所以用marked进行转换
+                $("#content").html(marked(content));
+            }
+        })
+    })();
+</script>
+</html>

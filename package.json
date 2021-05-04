@@ -1,0 +1,25 @@
+{
+  "name": "node-puppeteer",
+  "version": "1.0.0",
+  "description": "this is a node puppeteer demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "deploy": "gh-pages -d html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "chrome-finder": "^1.0.7",
+    "dayjs": "^1.10.4",
+    "express": "^4.17.1",
+    "node-schedule": "^2.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "puppeteer": "^9.1.0"
+  }
+}
